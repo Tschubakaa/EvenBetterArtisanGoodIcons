@@ -17,6 +17,8 @@ namespace BetterArtisanGoodIcons.Content
         public string Juice { get; set; } = null;
         public string Honey { get; set; } = null;
         public string DriedMushrooms { get; set; } = null;
+        public string DriedFruit { get; set; } = null;
+        public string Mead { get; set; } = null;
 
     }
 }

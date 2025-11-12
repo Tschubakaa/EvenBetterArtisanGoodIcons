@@ -17,7 +17,9 @@ namespace BetterArtisanGoodIcons.Content
             {ArtisanGood.Wine, "Fruits" },
             {ArtisanGood.Juice, "Vegetables" },
             {ArtisanGood.Pickles, "Vegetables" },
-            {ArtisanGood.DriedMushrooms, "Mushrooms" }
+            {ArtisanGood.DriedMushrooms, "Mushrooms" },
+            {ArtisanGood.DriedFruit, "Fruits" },
+            {ArtisanGood.Mead, "Flowers" }
         };
 
         /// <summary>Gets all valid <see cref="ArtisanGoodTextureProvider"/>s that can be used to get artisan good icons.</summary>

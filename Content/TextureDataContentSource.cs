@@ -32,6 +32,12 @@ namespace BetterArtisanGoodIcons.Content
 
             yield return new Tuple<string, List<string>, ArtisanGood>(TextureData.DriedMushrooms,
                 TextureData.Mushrooms, ArtisanGood.DriedMushrooms);
+            
+            yield return new Tuple<string, List<string>, ArtisanGood>(TextureData.DriedFruit,
+            TextureData.Fruits, ArtisanGood.DriedFruit);
+                
+            yield return new Tuple<string, List<string>, ArtisanGood>(TextureData.Mead,
+                TextureData.Flowers, ArtisanGood.Mead);
         }
     }
 }
