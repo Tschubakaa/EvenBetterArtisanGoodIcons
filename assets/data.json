@@ -8,5 +8,7 @@
   "Juice": "assets/juice.png",
   "Pickles": "assets/pickles.png",
   "Wine": "assets/wine.png",
-  "DriedMushrooms": "assets/driedMushrooms.png"
+  "DriedMushrooms": "assets/driedMushrooms.png",
+  "DriedFruit": "assets/driedFruit.png",
+  "Mead": "assets/mead.png"
 }
