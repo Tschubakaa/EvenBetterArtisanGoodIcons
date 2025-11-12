@@ -7,8 +7,8 @@ An updated mod fix to Better Artisan Good Icons (originally created by danvolche
 [Original Mod Link](https://www.nexusmods.com/stardewvalley/mods/2080)
 
 ## How to Download
-Click on the [Link](https://github.com/chsiao58/EvenBetterArtisanGoodIcons/releases/tag/v1.6.6) or go to the release page.  
-Then download the file named **EvenBetterArtisanGoodIcons.1.6.6.zip**.  
+Click on the [Link](https://github.com/chsiao58/EvenBetterArtisanGoodIcons/releases) or go to the release page.  
+Then download the file named **EvenBetterArtisanGoodIcons.1.6.7.zip**.  
 
 You don’t need anything else if you are just a normal user.
 
