@@ -45,6 +45,22 @@ namespace BetterArtisanGoodIcons
                     return true;
                 }
             }
+            
+            // after all providers returned false, check for "Wild" in data.json
+            // allows for a universal default texture before falling back to vanilla
+            foreach (ArtisanGoodTextureProvider provider in TextureProviders)
+                {
+                    if ((int)provider.good == output.ParentSheetIndex)
+                    {
+                        if (provider.positions.TryGetValue("Wild", out Rectangle defaultRect))
+                        {
+                            textureSheet = provider.spriteSheet;
+                            mainPosition = defaultRect;
+                            iconPosition = Rectangle.Empty;
+                            return true;
+                        }
+                    }
+                }
 
             return false;
         }

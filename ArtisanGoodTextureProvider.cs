@@ -12,13 +12,13 @@ namespace BetterArtisanGoodIcons
     internal class ArtisanGoodTextureProvider
     {
         /// <summary>The spritesheet to pull textures from.</summary>
-        private readonly Texture2D spriteSheet;
+        public readonly Texture2D spriteSheet;
 
         /// <summary>The rectangles that correspond to each item name.</summary>
-        private readonly IDictionary<string, Rectangle> positions = new Dictionary<string, Rectangle>();
+        public readonly IDictionary<string, Rectangle> positions = new Dictionary<string, Rectangle>();
 
         /// <summary>The type of artisan good this provides texture for.</summary>
-        private readonly ArtisanGood good;
+        public readonly ArtisanGood good;
 
         internal ArtisanGoodTextureProvider(Texture2D texture, List<string> names, ArtisanGood good)
         {
