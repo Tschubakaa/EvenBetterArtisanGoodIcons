@@ -36,32 +36,41 @@ namespace BetterArtisanGoodIcons
             mainPosition = Game1.getSourceRectForStandardTileSheet(Game1.objectSpriteSheet, output.ParentSheetIndex, 16, 16);
             iconPosition = Rectangle.Empty;
 
+            Texture2D wildTexture = null;
+            Rectangle wildRectang = Rectangle.Empty;
+
             foreach (ArtisanGoodTextureProvider manager in TextureProviders)
             {
                 if (manager.GetDrawInfo(output, ref textureSheet, ref mainPosition, ref iconPosition))
                 {
-                    if (config.DisableSmallSourceIcons)
+                    if (config.ShowSmallSourceIcons)
                         iconPosition = Rectangle.Empty;
                     return true;
                 }
-            }
-            
-            // after all providers returned false, check for "Wild" in data.json
-            // allows for a universal default texture before falling back to vanilla
-            foreach (ArtisanGoodTextureProvider provider in TextureProviders)
+
+                // remember "Wild" as fallback
+                // allows using a universal default texture before falling back to vanilla
+                // also solves the issue where "Wild Honey" has no applied texture
+                if (config.UseWildDefaultTexture)
                 {
-                    if ((int)provider.good == output.ParentSheetIndex)
+                    if ((int)manager.good == output.ParentSheetIndex && wildTexture == null)
                     {
-                        if (provider.positions.TryGetValue("Wild", out Rectangle defaultRect))
+                        if (manager.positions.TryGetValue("Wild", out Rectangle temp))
                         {
-                            textureSheet = provider.spriteSheet;
-                            mainPosition = defaultRect;
-                            iconPosition = Rectangle.Empty;
-                            return true;
+                            wildTexture = manager.spriteSheet;
+                            wildRectang = temp;
                         }
                     }
                 }
+            }
 
+            if (wildTexture != null)
+            {
+                textureSheet = wildTexture;
+                mainPosition = wildRectang;
+                iconPosition = Rectangle.Empty;
+                return true;
+            }
             return false;
         }
     }

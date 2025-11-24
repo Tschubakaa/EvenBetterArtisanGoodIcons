@@ -2,6 +2,7 @@
 {
     internal class BetterArtisanGoodIconsConfig
     {
-        public bool DisableSmallSourceIcons { get; set; } = true;
+        public bool ShowSmallSourceIcons { get; set; } = false;
+        public bool UseWildDefaultTexture { get; set; } = true;
     }
 }
